@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech-Clock & Weather Dashboard</title>
+    <meta name="description" content="A futuristic global clock and weather dashboard with cyberpunk aesthetics">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="container">
+        <header class="header">
+            <h1 class="title glitch" data-text="TECH-CLOCK">TECH-CLOCK</h1>
+            <p class="subtitle">GLOBAL WEATHER DASHBOARD v2.0</p>
+        </header>
+
+        <main class="dashboard">
+            <!-- Clock Section -->
+            <section class="clock-section">
+                <div class="clock-container">
+                    <div class="clock-card neon-border">
+                        <div class="clock-label">LOCAL TIME</div>
+                        <div class="clock-display" id="local-time">--:--:--</div>
+                        <div class="clock-date" id="local-date">----/--/--</div>
+                        <div class="clock-zone" id="local-zone">---</div>
+                    </div>
+                    <div class="clock-card neon-border cyan">
+                        <div class="clock-label">UTC TIME</div>
+                        <div class="clock-display" id="utc-time">--:--:--</div>
+                        <div class="clock-date" id="utc-date">----/--/--</div>
+                        <div class="clock-zone">COORDINATED UNIVERSAL TIME</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Weather Section -->
+            <section class="weather-section">
+                <div class="search-container neon-border magenta">
+                    <div class="search-icon">◉</div>
+                    <input 
+                        type="text" 
+                        id="city-input" 
+                        class="search-input" 
+                        placeholder="ENTER CITY NAME..."
+                        autocomplete="off"
+                    >
+                    <button id="search-btn" class="search-btn">
+                        <span class="btn-text">SCAN</span>
+                        <span class="btn-icon">▶</span>
+                    </button>
+                </div>
+
+                <div id="weather-display" class="weather-display">
+                    <div class="weather-placeholder">
+                        <div class="placeholder-icon">☁</div>
+                        <p>AWAITING LOCATION INPUT...</p>
+                        <p class="placeholder-sub">Enter a city to fetch weather data</p>
+                    </div>
+                </div>
+
+                <div id="weather-error" class="weather-error hidden">
+                    <div class="error-icon">⚠</div>
+                    <p id="error-message">ERROR: LOCATION NOT FOUND</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-line"></div>
+            <p>SYSTEM ONLINE • DATA STREAM ACTIVE • <span id="footer-time"></span></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
