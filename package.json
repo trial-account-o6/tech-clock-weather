@@ -1,0 +1,15 @@
+{
+  "name": "tech-clock-weather-dashboard",
+  "version": "1.0.0",
+  "description": "Cyberpunk tech clock and weather dashboard with modular JS and tests",
+  "type": "module",
+  "scripts": {
+    "test": "vitest --run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^9.3.4",
+    "jsdom": "^24.0.0",
+    "vitest": "^1.2.2"
+  }
+}
